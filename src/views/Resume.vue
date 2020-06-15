@@ -11,8 +11,8 @@
 
 <script lang="ts">
 import { Component, Prop, Vue } from "vue-property-decorator";
-import ResumeAside from "@/components/ResumeAside.vue";
-import ResumeContent from "@/components/ResumeContent.vue";
+import ResumeAside from "@/components/resume/ResumeAside.vue";
+import ResumeContent from "@/components/resume/ResumeContent.vue";
 
 @Component({
   components: { ResumeAside, ResumeContent }
