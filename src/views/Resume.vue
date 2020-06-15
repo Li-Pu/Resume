@@ -23,6 +23,10 @@ export default class Resume extends Vue {
 </script>
 
 <style lang="stylus" scoped>
+@import '../css/index.stylus'
+
+resume-split-neg-percent = 100% - resume-split-percent
+
 #resume
     margin 0 auto
     width 210mm
@@ -38,7 +42,7 @@ export default class Resume extends Vue {
 
 #leftContainer
     position relative
-    right 70%
+    right resume-split-neg-percent
     width 100%
     height 100%
     background-color #f0f0f0
@@ -46,12 +50,12 @@ export default class Resume extends Vue {
 #aside
     float left
     position relative
-    left 70%
-    width 30%
+    left resume-split-neg-percent
+    width resume-split-percent
 
 #content
     float left
     position relative
-    left 70%
-    width 70%
+    left resume-split-neg-percent
+    width resume-split-neg-percent
 </style>
