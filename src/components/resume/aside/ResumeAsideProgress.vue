@@ -13,13 +13,11 @@
 <script lang="ts">
 import { Component, Prop, Vue } from "vue-property-decorator";
 
-@Component({
-  props: {
-    label: String,
-    progress: Number
-  }
-})
-export default class ResumeAsideProgress extends Vue {}
+@Component
+export default class ResumeAsideProgress extends Vue {
+  @Prop() private label!: string;
+  @Prop({ default: 0 }) private progress!: number;
+}
 </script>
 
 <style lang="stylus">

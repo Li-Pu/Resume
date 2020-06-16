@@ -1,4 +1,4 @@
-const infos: any = {
+const infos = {
   name: "张三",
   basicInfos: [
     {
