@@ -12,12 +12,10 @@
 <script lang="ts">
 import { Component, Prop, Vue } from "vue-property-decorator";
 
-@Component({
-  props: {
-    title: String
-  }
-})
-export default class ResumeContent extends Vue {}
+@Component
+export default class ResumeContent extends Vue {
+  @Prop() private title!: string;
+}
 </script>
 
 <style lang="stylus" scoped>

@@ -65,7 +65,7 @@
 </template>
 
 <script lang="ts">
-import { Component, Prop, Vue } from "vue-property-decorator";
+import { Component, Vue } from "vue-property-decorator";
 import ResumeAsideSection from "./aside/ResumeAsideSection.vue";
 import ResumeAsideProgress from "./aside/ResumeAsideProgress.vue";
 import infos from "../../personalInfo/infos";
@@ -77,7 +77,7 @@ import infos from "../../personalInfo/infos";
   }
 })
 export default class ResumeAside extends Vue {
-  infos: any = infos;
+  private infos = infos;
 }
 </script>
 

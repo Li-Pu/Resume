@@ -1,1 +1,4 @@
+// 主题颜色
 theme-color = rgb(21, 117, 191)
+// 文本字体颜色
+text-color = #4F2F4F
