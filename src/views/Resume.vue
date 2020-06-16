@@ -10,7 +10,7 @@
 </template>
 
 <script lang="ts">
-import { Component, Prop, Vue } from "vue-property-decorator";
+import { Component, Vue } from "vue-property-decorator";
 import ResumeAside from "@/components/resume/ResumeAside.vue";
 import ResumeContent from "@/components/resume/ResumeContent.vue";
 
@@ -28,7 +28,7 @@ resume-split-neg-percent = 100% - resume-split-percent
 #resume
     margin 0 auto
     width 210mm
-    height 276mm
+    height 297mm
     outline 1px solid black
 
 #rightContainer

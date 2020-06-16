@@ -9,15 +9,13 @@
   </div>
 </template>
 
-<script>
+<script lang="ts">
 import { Component, Prop, Vue } from "vue-property-decorator";
 
-@Component({
-  props: {
-    title: String
-  }
-})
-export default class ResumeAsideSection extends Vue {}
+@Component
+export default class ResumeAsideSection extends Vue {
+  @Prop() private title!: string;
+}
 </script>
 
 <style lang="stylus" scoped>

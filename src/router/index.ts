@@ -1,14 +1,15 @@
 import Vue from "vue";
 import VueRouter, { RouteConfig } from "vue-router";
-import Home from "../views/Home.vue";
-import Resume from "../views/Resume.vue";
+import Resume from "@/views/Resume.vue";
+import infos from "@/personalInfo/infos";
 
 Vue.use(VueRouter);
 
 const routes: Array<RouteConfig> = [
   {
     path: "/",
-    name: "Home",
+    name: "Resume",
+    meta: { title: infos.name || "resume" },
     component: Resume
   },
   {
@@ -26,6 +27,11 @@ const router = new VueRouter({
   mode: "history",
   base: process.env.BASE_URL,
   routes
+});
+
+router.beforeEach((to, from, next) => {
+  document.title = to.meta.title;
+  next();
 });
 
 export default router;
