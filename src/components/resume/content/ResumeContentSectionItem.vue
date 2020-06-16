@@ -14,7 +14,7 @@
       </div>
       <div class="resume-content-section-item-role">{{ role }}</div>
       <div class="resume-content-section-item-description" v-if="descriptions">
-        <div v-for="description in descriptions" :key="description">
+        <div v-for="(description, index) in descriptions" :key="index">
           <p v-if="typeof description === 'string'" v-html="description"></p>
           <div v-else-if="typeof description === 'object'">
             <p v-if="description.content" v-html="description.content"></p>
