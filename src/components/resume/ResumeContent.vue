@@ -22,12 +22,25 @@
           v-bind:descriptions="info.descriptions"
         />
       </ResumeContentSection>
+      <ResumeContentSection title="项目经验" v-if="infos.projectInfos">
+        <ResumeContentSectionItem
+          v-for="(info, index) in infos.projectInfos"
+          v-bind:key="index"
+          v-bind:duration="info.start + '~' + info.end"
+          v-bind:corporation="info.projectName + '(' + info.companyName + ')'"
+          v-bind:corporationImgUrl="info.projectImgUrl"
+          v-bind:role="info.position"
+          v-bind:descriptions="
+            info.projectDescriptions.concat(info.taskDescriptions)
+          "
+        />
+      </ResumeContentSection>
     </div>
   </div>
 </template>
 
 <script lang="ts">
-import { Component, Prop, Vue } from "vue-property-decorator";
+import { Component, Vue } from "vue-property-decorator";
 
 import ResumeContentSection from "./content/ResumeContentSection.vue";
 import ResumeContentSectionItem from "./content/ResumeContentSectionItem.vue";
