@@ -49,7 +49,18 @@ const infos: any = {
     }
   ],
   selfEvaluation:
-    "自我介绍篇幅不用太长，注意结合简历整体的美观度。自我评价应做到突出自身符合目标岗位要求的“卖点”，避免使用过多的形容词。"
+    "自我介绍篇幅不用太长，注意结合简历整体的美观度。自我评价应做到突出自身符合目标岗位要求的“卖点”，避免使用过多的形容词。",
+  educationInfos: [
+    {
+      start: "2000.09",
+      end: "2004.06",
+      schoolName: "北航",
+      schoolImgUrl:
+        "https://www.lgstatic.com/i/image/M00/AD/4D/CgqKkVi1E2OAQTwUAAAOQDrOH7435.jpeg",
+      degree: "本科",
+      subject: "计算机科学与技术"
+    }
+  ]
 };
 
 export default infos;

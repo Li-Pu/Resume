@@ -17,9 +17,7 @@ import ResumeContent from "@/components/resume/ResumeContent.vue";
 @Component({
   components: { ResumeAside, ResumeContent }
 })
-export default class Resume extends Vue {
-  @Prop() private msg!: string;
-}
+export default class Resume extends Vue {}
 </script>
 
 <style lang="stylus" scoped>
@@ -31,7 +29,7 @@ resume-split-neg-percent = 100% - resume-split-percent
     margin 0 auto
     width 210mm
     height 276mm
-    background-color red
+    outline 1px solid black
 
 #rightContainer
     position relative
