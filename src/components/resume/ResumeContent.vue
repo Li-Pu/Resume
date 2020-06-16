@@ -11,6 +11,17 @@
           v-bind:role="info.subject + '(' + info.degree + ')'"
         />
       </ResumeContentSection>
+      <ResumeContentSection title="工作经验" v-if="infos.workExperienceInfos">
+        <ResumeContentSectionItem
+          v-for="(info, index) in infos.workExperienceInfos"
+          v-bind:key="index"
+          v-bind:duration="info.start + '~' + info.end"
+          v-bind:corporation="info.companyName"
+          v-bind:corporationImgUrl="info.companyImgUrl"
+          v-bind:role="info.position"
+          v-bind:descriptions="info.descriptions"
+        />
+      </ResumeContentSection>
     </div>
   </div>
 </template>

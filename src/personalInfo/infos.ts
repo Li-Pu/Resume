@@ -60,6 +60,25 @@ const infos: any = {
       degree: "本科",
       subject: "计算机科学与技术"
     }
+  ],
+  workExperienceInfos: [
+    {
+      start: "2004.09",
+      end: "20012.06",
+      companyName: "百度",
+      companyImgUrl:
+        "https://www.lgstatic.com/i/image/M00/AD/4D/CgqKkVi1E2OAQTwUAAAOQDrOH7435.jpeg",
+      position: "软件攻城狮",
+      descriptions: [
+        {
+          content: "",
+          details: [
+            "主要负责描述，例如：带领X人团队进行市场营销和产品策划。",
+            "1-3行主要负责描述，不要太多。"
+          ]
+        }
+      ]
+    }
   ]
 };
 

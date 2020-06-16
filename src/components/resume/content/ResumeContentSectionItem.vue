@@ -8,11 +8,30 @@
         <img
           class="resume-content-section-item-corporation-img"
           v-if="corporationImgUrl !== undefined && corporationImgUrl !== null"
-          v-bind:src="corporationImgUrl"
+          :src="corporationImgUrl"
         />
         {{ corporation }}
       </div>
       <div class="resume-content-section-item-role">{{ role }}</div>
+      <div class="resume-content-section-item-description" v-if="descriptions">
+        <div v-for="description in descriptions" :key="description">
+          <p v-if="typeof description === 'string'">
+            {{ description }}
+          </p>
+          <div v-else-if="typeof description === 'object'">
+            <p v-if="description.content">
+              {{ description.content }}
+            </p>
+            <div
+              class="resume-content-section-item-description-detail"
+              v-for="detail in description.details"
+              :key="detail"
+            >
+              {{ detail }}
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </template>
@@ -26,6 +45,7 @@ export default class ResumeContentSectionItem extends Vue {
   @Prop() private corporation!: string;
   @Prop() private corporationImgUrl!: string;
   @Prop() private role!: string;
+  @Prop() private descriptions!: string;
 }
 </script>
 
@@ -61,4 +81,11 @@ img-width = resume-content-section-item-font-size + 2px
     font-weight 500
     text-align left
     color lighten(theme-color, 30%)
+.resume-content-section-item-description
+    margin-top 6px
+    font-size 13px
+    text-align start
+.resume-content-section-item-description-detail
+    display list-item
+    margin-left 20px
 </style>
