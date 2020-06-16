@@ -6,6 +6,10 @@
 
 更新`src/personalInfo/`文件夹下的文件中的信息即可更新简历内容
 
+## 示例
+
+![截图](./screenshots/Screenshot.jpg)
+
 ## Project setup
 ```
 npm install
