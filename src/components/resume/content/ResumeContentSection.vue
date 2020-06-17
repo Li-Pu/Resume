@@ -26,7 +26,7 @@ half-title-height = title-height / 2
 
 .resume-content-section
     position relative
-    margin-top 38px
+    margin-top 18px
     padding-top title-height
 
 .resume-content-section-title
