@@ -5,7 +5,7 @@
         <ResumeContentSectionItem
           v-for="(info, index) in infos.educationInfos"
           v-bind:key="index"
-          v-bind:duration="info.start + '~' + info.end"
+          v-bind:duration="getDuration(info)"
           v-bind:corporation="info.schoolName"
           v-bind:corporationImgUrl="info.schoolImgUrl"
           v-bind:role="info.subject + '(' + info.degree + ')'"
@@ -15,7 +15,7 @@
         <ResumeContentSectionItem
           v-for="(info, index) in infos.workExperienceInfos"
           v-bind:key="index"
-          v-bind:duration="info.start + '~' + info.end"
+          v-bind:duration="getDuration(info)"
           v-bind:corporation="info.companyName"
           v-bind:corporationImgUrl="info.companyImgUrl"
           v-bind:role="info.position"
@@ -26,8 +26,8 @@
         <ResumeContentSectionItem
           v-for="(info, index) in infos.projectInfos"
           v-bind:key="index"
-          v-bind:duration="info.start + '~' + info.end"
-          v-bind:corporation="info.projectName + '(' + info.companyName + ')'"
+          v-bind:duration="getDuration(info)"
+          v-bind:corporation="info.projectName"
           v-bind:corporationImgUrl="info.projectImgUrl"
           v-bind:role="info.position"
           v-bind:descriptions="
@@ -54,6 +54,9 @@ import infos from "@/personalInfo/infos";
 })
 export default class ResumeContent extends Vue {
   infos = infos;
+  getDuration(info: { start: string; end: string }) {
+    return info.start + " ~ " + info.end;
+  }
 }
 </script>
 
@@ -61,6 +64,7 @@ export default class ResumeContent extends Vue {
 @import '../../css/index.stylus'
 #resume-content
   padding-top 30px
+  padding-bottom 20px
   padding-left resume-content-padding-left
   padding-right resume-content-padding-right
 </style>
