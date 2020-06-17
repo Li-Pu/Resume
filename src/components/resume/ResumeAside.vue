@@ -86,6 +86,7 @@ export default class ResumeAside extends Vue {
 
 #resume-aside
     padding-top 30px
+    padding-bottom 20px
 
 #photo
     width 120px
