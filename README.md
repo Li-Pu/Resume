@@ -1,42 +1,8 @@
-# Nuxt 3 Minimal Starter
+# resume
 
-Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+> 使用网页完成一个简历的设计，通过Chrome的打印功能将其转化为一个PDF简历文件
 
-## Setup
+## 使用
+更新personalInfo/文件夹下的文件中的信息即可更新简历内容
 
-Make sure to install the dependencies:
-
-```bash
-# yarn
-yarn install
-
-# npm
-npm install
-
-# pnpm
-pnpm install
-```
-
-## Development Server
-
-Start the development server on http://localhost:3000
-
-```bash
-npm run dev
-```
-
-## Production
-
-Build the application for production:
-
-```bash
-npm run build
-```
-
-Locally preview production build:
-
-```bash
-npm run preview
-```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+## 示例
