@@ -1,0 +1,23 @@
+@font-face {
+    font-family: LXGWWenKai;
+    font-weight: 400;
+    src: url('./LXGWWenKai-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: LXGWWenKai-Bold;
+    font-weight: 600;
+    src: url('./LXGWWenKai-Bold.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: LXGWWenKai-Light;
+    font-weight: 200;
+    src: url('./LXGWWenKai-Light.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: LXGWWenKaiMono;
+    font-weight: 400;
+    src: url('./LXGWWenKaiMono-Regular.ttf') format('truetype');
+}
