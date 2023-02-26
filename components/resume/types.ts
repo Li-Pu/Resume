@@ -7,7 +7,7 @@ export type PersonalInfoAsideSection<T extends string | number> = Array<Personal
 
 export type PersonalInfoContentItemDescription = {
     content: string,
-    details: Array<string>
+    details?: Array<string>
 }
 
 export type PersonalInfoContentBaseItem = {
@@ -15,26 +15,28 @@ export type PersonalInfoContentBaseItem = {
     end: string
 }
 
-export type PersonalInfoContentItem = PersonalInfoContentBaseItem & {
+export type PersonalInfoContentComponyItem = PersonalInfoContentBaseItem & {
     companyName: string
     companyImgUrl: string
     position: string
     descriptions: Array<PersonalInfoContentItemDescription>
-} | PersonalInfoContentBaseItem & {
+}
+
+export type PersonalInfoContentSchoolItem = PersonalInfoContentBaseItem & {
     schoolName: string
     schoolImgUrl: string
     degree: string
     subject: string
-} | PersonalInfoContentBaseItem & {
+}
+
+export type PersonalInfoContentProjectItem = PersonalInfoContentBaseItem & {
     companyName: string
     projectName: string
     projectImgUrl: string
     position: string
-    projectDescriptions: Array<PersonalInfoContentItemDescription & { enumrate: boolean }>
-    taskDescriptions: Array<string | PersonalInfoContentItemDescription>
+    projectDescriptions: Array<PersonalInfoContentItemDescription & { enumrate?: boolean }>
+    taskDescriptions?: Array<string | PersonalInfoContentItemDescription>
 }
-
-export type PersonalInfoContentItemSection = Array<PersonalInfoContentItem>
 
 export interface PersonalInfo {
     name: string
@@ -45,7 +47,7 @@ export interface PersonalInfo {
     jobInfos: PersonalInfoAsideSection<string>
     jobSkillInfos: PersonalInfoAsideSection<number>
     selfEvaluation: string
-    educationInfos: PersonalInfoContentItemSection
-    workExperienceInfos: PersonalInfoContentItemSection
-    projectInfos: PersonalInfoContentItemSection
+    educationInfos: Array<PersonalInfoContentSchoolItem>
+    workExperienceInfos: Array<PersonalInfoContentComponyItem>
+    projectInfos?: Array<PersonalInfoContentProjectItem>
 }

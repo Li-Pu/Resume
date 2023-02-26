@@ -14,7 +14,9 @@ export default <Partial<Config>>{
             colors: {
                 transparent: 'transparent',
                 current: 'currentColor',
-                primary: '#1d4ed8'
+                primary: '#1d4ed8',
+                primary_darken: '#0f5286',
+                primary_lighten: '#c9e4f9',
             }
         }
     }

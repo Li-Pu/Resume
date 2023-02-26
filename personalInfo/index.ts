@@ -71,11 +71,11 @@ const infos: PersonalInfo = {
       end: "20012.06",
       companyName: "百度",
       companyImgUrl:
-        "https://www.lgstatic.com/i/image/M00/AD/4D/CgqKkVi1E2OAQTwUAAAOQDrOH7435.jpeg",
+        "https://www.baidu.com/favicon.ico",
       position: "软件攻城狮",
       descriptions: [
         {
-          content: "",
+          content: "主要负责描述，例如：带领X人团队进行市场营销和产品策划",
           details: [
             "主要负责描述，例如：带领X人团队进行市场营销和产品策划。",
             "1-3行主要负责描述，不要太多。"
@@ -91,7 +91,7 @@ const infos: PersonalInfo = {
       companyName: "百度",
       projectName: "百度图片搜索",
       projectImgUrl:
-        "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1592321814320&di=2ec32bf05cc74b6d1c9d680dde5a7e0d&imgtype=0&src=http%3A%2F%2Fcuimg.zuyushop.com%2FcuxiaoPic%2F201412%2F2014120020045241723.jpg",
+        "https://www.baidu.com/favicon.ico",
       position: "软件攻城狮",
       projectDescriptions: [
         {
@@ -106,7 +106,7 @@ const infos: PersonalInfo = {
       taskDescriptions: [
         "主要负责描述，例如：带领X人团队进行市场营销和产品策划。<br/>1-3行主要负责描述，不要太多。",
         {
-          content: "",
+          content: "主要负责描述，例如：带领X人团队进行市场营销和产品策划。",
           details: [
             "主要负责描述，例如：带领X人团队进行市场营销和产品策划。",
             "1-3行主要负责描述，不要太多。"
